@@ -1,3 +1,13 @@
 {
-  "presets": [ "@babel/preset-env" ]
+  "presets": [ "@babel/preset-env" ],
+  "env": {
+    "esmodules": {
+      "presets": [
+        ["@babel/preset-env", {
+          // do not transform es modules import/export for proper tree-shaking
+          "modules": false
+        }]
+      ]
+    }
+  }
 }
